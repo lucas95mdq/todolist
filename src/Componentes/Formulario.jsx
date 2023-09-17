@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Formulario = ({tarea, setTarea, list, setList}) => {
+const Formulario = ({tarea, setTarea, list, setList, done, setDone}) => {
 
 
 
@@ -11,6 +11,7 @@ const Formulario = ({tarea, setTarea, list, setList}) => {
     const handleClick = () => {
         setList([...list, tarea]);
         setTarea("");
+        setDone([...done, false]);
     }
 
 
